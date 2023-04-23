@@ -1,0 +1,13 @@
+es:
+  bank: Banco
+  banks: Bancos
+  table_bank:
+    name: Nombre
+    option: Opciones
+  table_provedor:
+    name: Nombre
+    nit: Nit
+    contact: Contacto
+    phone: Celular
+    count: Numero de cuenta
+    option: Opciones

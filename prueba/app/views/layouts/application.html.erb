@@ -12,6 +12,15 @@
       <li class="mr-6">
         <a class="text-blue-500 hover:text-blue-800" href="<%= proveedors_path %>">Proveedores</a>
       </li>
+      <li class="mr-6">
+        <% if user_signed_in? %> 
+        <span> Usuario: <%= current_user.email %> </span> 
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "text-blue-500 hover:underline" %> 
+        <% else %>
+          <%= button_to "Sign in", new_user_session_path, class: "text-blue-500 hover:underline" %> 
+        <% end %>
+      </li>
+
       
     </ul>
     <!-- this is where content will be rendered -->

@@ -1,10 +1,9 @@
-<h1>Editing proveedor</h1>
+<div class="flex flex-col items-center justify-center">
+  <h1 class="text-2xl font-bold mb-4">Editar proveedor</h1>
 
-<%= render "form", proveedor: @proveedor %>
+  <%= render "form", proveedor: @proveedor %>
 
-<br>
-
-<div>
-  <%= link_to "Show this proveedor", @proveedor %> |
-  <%= link_to "Back to proveedors", proveedors_path %>
+  <div class="mt-4">
+    <%= link_to "Volver a proveedores", proveedors_path, class: "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none focus:shadow-outline" %>
+  </div>
 </div>

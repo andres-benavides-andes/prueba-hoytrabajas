@@ -1,32 +1,20 @@
-<div id="<%= dom_id proveedor %>">
-  <p>
-    <strong>Nombre:</strong>
+<tr>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
     <%= proveedor.nombre %>
-  </p>
-
-  <p>
-    <strong>Nit:</strong>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
     <%= proveedor.nit %>
-  </p>
-
-  <p>
-    <strong>Contacto:</strong>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
     <%= proveedor.contacto %>
-  </p>
-
-  <p>
-    <strong>Celular:</strong>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
     <%= proveedor.celular %>
-  </p>
-
-  <p>
-    <strong>Banco:</strong>
-    <%= proveedor.banco_id %>
-  </p>
-
-  <p>
-    <strong>Numero cuenta:</strong>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
+    <%= proveedor.banco.nombre %>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-center">
     <%= proveedor.numero_cuenta %>
-  </p>
+  </td>
 
-</div>

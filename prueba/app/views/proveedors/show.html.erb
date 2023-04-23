@@ -1,10 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @proveedor %>
-
-<div>
-  <%= link_to "Edit this proveedor", edit_proveedor_path(@proveedor) %> |
-  <%= link_to "Back to proveedors", proveedors_path %>
-
-  <%= button_to "Destroy this proveedor", @proveedor, method: :delete %>
-</div>
+ <div class="border border-gray-200 shadow-md rounded-lg overflow-hidden">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Nit</th>
+          <th>Contacto</th>
+          <th>Celular</th>
+          <th>Banco</th>
+          <th>Numero cuenta</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @proveedor %>
+          <td class="px-6 py-4 whitespace-nowrap">
+          <%= link_to "Editar", edit_proveedor_path(@proveedor), class: "text-blue-500 hover:underline" %> | <%= button_to "Eliminar", @proveedor, method: :delete, class: "text-blue-500 hover:underline" %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  <%= link_to "Volver a proveedores", proveedors_path %>
+</button>

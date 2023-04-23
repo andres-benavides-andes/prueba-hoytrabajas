@@ -1,4 +1,4 @@
-FROM ruby:2.7-alpine
+FROM ruby:2.7.7-alpine
 RUN gem install bundler -v 2.3.19
 RUN apk add --no-cache build-base postgresql-client postgresql-dev bash libcurl nodejs npm yarn
 RUN npm install -g npx

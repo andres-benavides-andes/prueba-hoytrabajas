@@ -1,33 +1,35 @@
-<p style="color: green"><%= notice %></p>
+<div class="flex flex-col items-center justify-center">
+  <p style="color: green"><%= notice %></p>
 
-<h1 class="text-2xl font-bold mb-4">Proveedores</h1>
+  <h1 class="text-2xl font-bold mb-4">Proveedores</h1>
 
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  <%= link_to "Crear proveedor", new_proveedor_path %>
-</button>
-<div id="proveedors">
-  <div class="border border-gray-200 shadow-md rounded-lg overflow-hidden">
-    <table class="min-w-full divide-y divide-gray-200">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Nit</th>
-          <th>Contacto</th>
-          <th>Celular</th>
-          <th>Banco</th>
-          <th>Numero cuenta</th>
-          <th>Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @proveedors.each do |proveedor| %>
-          <%= render proveedor %>
-           <td class="px-6 py-4 whitespace-nowrap">
-            <%= link_to "Ver proveedor", proveedor, class: "text-blue-500 hover:underline" %>
-            </td>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <%= link_to "Crear proveedor", new_proveedor_path %>
+  </button>
+  <div id="proveedors">
+    <div class="border border-gray-200 shadow-md rounded-lg overflow-hidden">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Nit</th>
+            <th>Contacto</th>
+            <th>Celular</th>
+            <th>Banco</th>
+            <th>Numero cuenta</th>
+            <th>Opciones</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @proveedors.each do |proveedor| %>
+            <%= render proveedor %>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <%= link_to "Ver proveedor", proveedor, class: "text-blue-500 hover:underline" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

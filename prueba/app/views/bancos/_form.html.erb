@@ -1,9 +1,9 @@
-<%= form_with(model: banco) do |form| %>
+<%= form_with(model: banco, class: "max-w-lg mx-auto") do |form| %>
   <% if banco.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(banco.errors.count, "error") %> prohibited this banco from being saved:</h2>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <h2 class="font-bold text-lg mb-2"><%= pluralize(banco.errors.count, "error") %> prohibited this banco from being saved:</h2>
 
-      <ul>
+      <ul class="list-disc ml-4">
         <% banco.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nombre, style: "display: block" %>
-    <%= form.text_field :nombre %>
+  <div class="mt-4">
+    <%= form.label :nombre, class: "block font-bold mb-2" %>
+    <%= form.text_field :nombre, class: "shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-4">
+    <%= form.submit class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
   </div>
 <% end %>
